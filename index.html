@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Simple Diner - Fresh ingredients, honest cooking, and a welcoming atmosphere. Book a table online.">
+    <title>The Simple Diner | Fine Food, Made Simple</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Sticky Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo-container">
+                <h1 class="logo">The Simple Diner</h1>
+            </a>
+            
+            <nav id="mainNav">
+                <a href="#menu" class="active">Menu</a>
+                <a href="#special">Special</a>
+                <a href="#chef">Chef</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Icon -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fa-regular fa-moon moon-icon"></i>
+                    <i class="fa-regular fa-sun sun-icon"></i>
+                </button>
+                
+                <!-- CTA Book Table -->
+                <button class="btn btn-open-booking">Book a Table</button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <h2>Good Food,<br>Made Simple.</h2>
+                <p>Fresh ingredients, honest cooking, and a welcoming atmosphere.</p>
+                <div class="hero-actions">
+                    <a href="#menu" class="btn">See Our Menu</a>
+                    <button class="btn btn-secondary btn-open-booking">Book a Table</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Highlights Section -->
+        <section id="menu" class="container section reveal">
+            <h2 class="section-title">Menu Highlights</h2>
+            <p class="section-subtitle">Taste our hand-crafted favorites made from fresh, locally sourced ingredients.</p>
+            
+            <!-- Category Filter Tabs -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All Dishes</button>
+                <button class="filter-btn" data-filter="starters">Starters</button>
+                <button class="filter-btn" data-filter="mains">Mains</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+
+            <!-- Menu Cards Grid -->
+            <div class="menu-grid">
+                <!-- Starter -->
+                <div class="card" data-category="starters">
+                    <div class="card-img-container">
+                        <img src="images/bruschetta.png" alt="Heirloom Tomato Bruschetta">
+                        <span class="card-tag">Fresh</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Tomato Bruschetta</h3>
+                            <span class="card-price">$12</span>
+                        </div>
+                        <p class="card-description">Toasted artisanal sourdough topped with marinated heirloom tomatoes, fresh garlic, basil, and aged balsamic glaze.</p>
+                    </div>
+                </div>
+
+                <!-- Main 1 -->
+                <div class="card" data-category="mains">
+                    <div class="card-img-container">
+                        <img src="images/steak.png" alt="Steak Frites">
+                        <span class="card-tag">Signature</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Steak Frites</h3>
+                            <span class="card-price">$28</span>
+                        </div>
+                        <p class="card-description">Classic grilled choice ribeye steak with herb compound butter, served alongside hand-cut golden house fries.</p>
+                    </div>
+                </div>
+
+                <!-- Main 2 -->
+                <div class="card" data-category="mains">
+                    <div class="card-img-container">
+                        <img src="images/chicken.png" alt="Roasted Chicken">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Roasted Chicken</h3>
+                            <span class="card-price">$24</span>
+                        </div>
+                        <p class="card-description">Herb-roasted chicken breast and thigh, glazed in natural au jus, served with local roasted root vegetables.</p>
+                    </div>
+                </div>
+
+                <!-- Dessert -->
+                <div class="card" data-category="desserts">
+                    <div class="card-img-container">
+                        <img src="images/chocolate_cake.png" alt="Chocolate Lava Cake">
+                        <span class="card-tag">Popular</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Chocolate Lava Cake</h3>
+                            <span class="card-price">$10</span>
+                        </div>
+                        <p class="card-description">Rich molten chocolate cake served warm with an oozing liquid center, a scoop of vanilla bean ice cream, and raspberries.</p>
+                    </div>
+                </div>
+
+                <!-- Drink -->
+                <div class="card" data-category="drinks">
+                    <div class="card-img-container">
+                        <img src="images/mojito.png" alt="Classic Mint Mojito">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h3>Classic Mint Mojito</h3>
+                            <span class="card-price">$8</span>
+                        </div>
+                        <p class="card-description">Refreshing cocktail made with white rum, fresh lime juice, crushed mint leaves, cane sugar, and a splash of sparkling soda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chef's Recommendation Section -->
+        <section id="special" class="container section reveal">
+            <h2 class="section-title">Special Recommendation</h2>
+            <p class="section-subtitle">Exquisite culinary specialties curated weekly by our head chef.</p>
+            
+            <div class="chef-special">
+                <div class="chef-special-img"></div>
+                <div class="chef-special-content">
+                    <span class="chef-special-badge">Weekly Chef Special</span>
+                    <h3>Dry-Aged Ribeye Steak</h3>
+                    <p>Experience the peak of tenderness and rich flavor. Our 16oz prime bone-in ribeye is dry-aged for 28 days, seared at 800 degrees to lock in natural juices, and topped with locally forged wild mushroom compound butter. Served with a side of truffle roasted potatoes.</p>
+                    
+                    <div class="chef-special-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Sommelier Pairing</span>
+                            <span class="meta-val">Aged Cabernet Sauvignon</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Prep Time</span>
+                            <span class="meta-val">25-30 Mins</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-open-booking" style="margin-top: 30px; align-self: flex-start;">Reserve a Table for Dinner</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chef Profile Section -->
+        <section id="chef" class="container section reveal">
+            <div class="chef-grid">
+                <div class="chef-img-wrapper">
+                    <img src="images/chef.png" alt="Head Chef Marcus Vance">
+                </div>
+                <div class="chef-content">
+                    <h3>Chef Marcus Vance</h3>
+                    <span class="chef-title">Head Chef & Co-Founder</span>
+                    <p class="chef-text">For over two decades, Chef Marcus has believed that great meals do not need to be overly complicated. After studying in Paris and cooking in award-winning kitchens across coastal Italy, he returned home to start The Simple Diner.</p>
+                    <p class="chef-quote">"True culinary art lies in simplifying, not complicating. If you source fresh local ingredients and treat them with respect, the flavors speak for themselves."</p>
+                    <div class="chef-signature">Marcus Vance</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Slider Section -->
+        <section id="reviews" class="section reviews-section reveal">
+            <div class="container">
+                <h2 class="section-title">Guest Testimonials</h2>
+                <p class="section-subtitle">Here is what our guests have to say about their dining experience.</p>
+                
+                <div class="slider-container">
+                    <!-- Nav Controls -->
+                    <button class="slider-control prev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-control next" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <!-- Review slides -->
+                    <div class="slider-track" id="sliderTrack">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <div class="review-icon"><i class="fas fa-quote-right"></i></div>
+                            <p class="review-text">"The best steak I've had in a long time. Simple, perfectly cooked, and delicious. The warm atmosphere makes you feel right at home."</p>
+                            <span class="review-author">Sarah T.</span>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="review-icon"><i class="fas fa-quote-right"></i></div>
+                            <p class="review-text">"Great atmosphere and incredibly friendly staff. The herb-roasted chicken was tender, juicy, and packed with rustic flavors."</p>
+                            <span class="review-author">James P.</span>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <div class="review-icon"><i class="fas fa-quote-right"></i></div>
+                            <p class="review-text">"A true culinary gem! The chocolate lava cake is out of this world, with that perfect warm molten core. Excellent curated wine list."</p>
+                            <span class="review-author">Emily L.</span>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination Dots -->
+                    <div class="slider-dots" id="sliderDots"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="footer-logo">The Simple Diner</a>
+                <p>We craft honest, elegant comfort food using the freshest seasonal ingredients from local organic farms. Stop by for an unforgettable dining experience.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#special">Weekly Specials</a></li>
+                    <li><a href="#chef">Meet the Chef</a></li>
+                    <li><a href="#reviews">Testimonials</a></li>
+                    <li><a href="#" class="btn-open-booking">Book a Table</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--primary-color);"></i> 124 Culinary Heights, Seattle, WA 98101</p>
+                <p><i class="fas fa-phone" style="margin-right: 10px; color: var(--primary-color);"></i> (206) 555-0182</p>
+                <p><i class="fas fa-envelope" style="margin-right: 10px; color: var(--primary-color);"></i> hello@thesimplediner.com</p>
+                <p style="margin-top: 20px; font-weight: 600;"><i class="far fa-clock" style="margin-right: 10px; color: var(--primary-color);"></i> Opening Hours:</p>
+                <p style="padding-left: 25px; margin-bottom: 5px;">Tue - Thu: 5:00 PM - 10:00 PM</p>
+                <p style="padding-left: 25px;">Fri - Sun: 4:30 PM - 11:00 PM</p>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 The Simple Diner. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Reservation Modal Dialog -->
+    <div class="modal" id="reservationModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Book a Table</h3>
+                <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Booking Form -->
+                <form class="reservation-form" id="bookingForm" novalidate>
+                    <div class="form-group">
+                        <label for="bookName">Full Name</label>
+                        <input type="text" id="bookName" placeholder="Your name" required>
+                        <span class="form-error-msg"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookEmail">Email Address</label>
+                        <input type="email" id="bookEmail" placeholder="yourname@example.com" required>
+                        <span class="form-error-msg"></span>
+                    </div>
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="bookDate">Date</label>
+                            <input type="date" id="bookDate" required>
+                            <span class="form-error-msg"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookTime">Time</label>
+                            <input type="time" id="bookTime" required>
+                            <span class="form-error-msg"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookGuests">Number of Guests</label>
+                        <select id="bookGuests" required>
+                            <option value="" disabled selected>Select party size</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6 People</option>
+                            <option value="7">7 People</option>
+                            <option value="8">8 People</option>
+                            <option value="9">9+ People (Large Party)</option>
+                        </select>
+                        <span class="form-error-msg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bookNotes">Special Requests (Optional)</label>
+                        <textarea id="bookNotes" placeholder="Dietary restrictions, anniversary, table preference..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn" style="margin-top: 10px;">Confirm Reservation</button>
+                </form>
+
+                <!-- Success Confirmation State (Hidden initially) -->
+                <div class="booking-success" id="bookingSuccess">
+                    <div class="success-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3>Reservation Confirmed!</h3>
+                    <p>We are delighted to host you. A confirmation email has been sent. Here are your booking details:</p>
+                    
+                    <div class="booking-summary-box">
+                        <div class="booking-summary-row">
+                            <span class="summary-label">Confirmation Code</span>
+                            <span class="summary-val" id="sumCode" style="color: var(--primary-color);"></span>
+                        </div>
+                        <div class="booking-summary-row">
+                            <span class="summary-label">Guest Name</span>
+                            <span class="summary-val" id="sumName"></span>
+                        </div>
+                        <div class="booking-summary-row">
+                            <span class="summary-label">Email</span>
+                            <span class="summary-val" id="sumEmail"></span>
+                        </div>
+                        <div class="booking-summary-row">
+                            <span class="summary-label">Date & Time</span>
+                            <span class="summary-val"><span id="sumDate"></span> at <span id="sumTime"></span></span>
+                        </div>
+                        <div class="booking-summary-row">
+                            <span class="summary-label">Party Size</span>
+                            <span class="summary-val" id="sumGuests"></span>
+                        </div>
+                    </div>
+
+                    <button class="btn" id="closeSuccessBtn">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
